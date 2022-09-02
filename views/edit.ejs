@@ -11,13 +11,13 @@
 <body>
     <h1>Pokemon Edit</h1>
     <a href="/pokemon/"><button type="button">Link to Index Page</button></a>
-    <a href="/new/"><button>Add Pokemon</button></a>
-    form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+    <a href="pokemon/new/"><button>Add Pokemon</button></a>
+    <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
     Name: <input type="text" name="name" value="<%=data.name%>" /><br />
     Type: <input type="text" name="type" value="<%=data.type%>" /><br />
-    HP: <input type="text" name="hp value="<%=data.type%>" /><br />
-    Attack: <input type="text" name="attack" value="<%=data.type%>" /><br />
-    Defense: <input type="text" name="defense" value="<%=data.type%>" /><br />
+    HP: <input type="text" name="hp" value="<%=data.stats.hp%>" /><br />
+    Attack: <input type="text" name="attack" value="<%=data.stats.attack%>" /><br />
+    Defense: <input type="text" name="defense" value="<%=data.stats.defense%>" /><br />
     <input type="submit" name="" value="Edit Pokemon" />
   </form>
 </body>

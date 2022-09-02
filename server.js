@@ -21,19 +21,19 @@ app.get("/pokemon/new", (req, res) => {
 
 //DELETE
 app.delete("/pokemon/:id", (req, res) => {
-    data.splice(req.params.id, 1) /
+    data.splice(req.params.id, 1)
     res.redirect("/pokemon") 
   })
 
 //UPDATE
 app.put("/pokemon/:id", (req, res) => {
-  pokedex[req.params.id] = req.body
+  pokemon[req.params.id] = req.body
   res.redirect("/pokemon")
 })
 
 //CREATE
-app.post("/pokemon/:id", (req, res) => {
-    pokemon.push[req.body]
+app.post("/pokemon", (req, res) => {
+    pokemon.push(req.body)
     res.redirect("/pokemon")
 })
 
@@ -43,10 +43,9 @@ app.get("/pokemon/:id/edit", (req, res) => {
     res.render(
       "edit.ejs", 
       {
-        pokemon: data[req.params.id], 
-        id: req.params.indexOfFruitsArray, 
-      }
-    )
+        data: pokemon[req.params.id], 
+        id: req.params.id, 
+      })
   })
 
 //SHOW
