@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Pokemon App</title>
+</head>
+
+<nav>
+   
+
+<body>
+    <h1>Pokemon Page</h1>
+    <a href="/pokemon/"><button type="button">Link to Index Page</button></a>
+    <a href="/new/"><button>Add Pokemon</button></a>
+</nav>
+    <div class="container">
+        <h2>Name: <%=data.name %> </h2> 
+        <p><%=data.type %> </p>
+        <p><%=data.stats.hp %> </p>
+        <p><%=data.stats.attack %> </p>
+        <p><%=data.stats.defense %> </p>
+        <p><%=data.type %></p>
+        <img src="<%=data.img %>">
+        <a href="/pokemon/">Back to Index</a>
+    </div>
+</body>
+
+</html>
